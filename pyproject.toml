@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "statdash"
+version = "0.1.0"
+description = "Applied Statistics Labs"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Kryspin Musiol", email = "km243720@student.polsl.pl" }
+]
+dependencies = [
+    "streamlit>=1.40.0",
+    "pandas>=2.2.0",
+    "numpy>=2.0.0",
+    "plotly>=5.13.0",
+    "matplotlib>=3.9.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=22.0",
+    "flake8>=4.0"
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']

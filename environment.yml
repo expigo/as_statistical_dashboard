@@ -1,0 +1,19 @@
+name: statdash
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.11
+  - pip
+  - streamlit>=1.40.0
+  - pandas
+  - numpy>=2.1.3
+  - plotly
+  - matplotlib
+  - scipy
+  - scikit-learn
+  - pytest>=7.0
+  - black>=22.0
+  - flake8>=4.0s
+  - pip:
+    - -e .
