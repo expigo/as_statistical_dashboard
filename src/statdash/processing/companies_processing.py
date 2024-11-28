@@ -15,9 +15,9 @@ class CompaniesDataProcessor:
         """
         self.raw_data = df
         self.processed_data = None
-        self.numerical_columns = []
-        self.categorical_columns = []
-        self.datetime_columns = []
+        self.numerical_columns: List[str] = []
+        self.categorical_columns: List[str] = []
+        self.datetime_columns: List[str] = []
         
     def load_data(self, filepath: str) -> None:
         """
@@ -78,7 +78,7 @@ class CompaniesDataProcessor:
             
             # Handle missing values
             median_value = self.processed_data[col].median()
-            self.processed_data[col].fillna(median_value, inplace=True)
+            self.processed_data[col] = self.processed_data[col].fillna(median_value)
             
     @staticmethod
     def _convert_financial_string(series: pd.Series) -> pd.Series:
