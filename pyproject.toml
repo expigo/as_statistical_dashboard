@@ -11,6 +11,8 @@ requires-python = ">=3.11"
 authors = [
     { name = "Kryspin Musiol", email = "km243720@student.polsl.pl" }
 ]
+
+# mostly handled by Mamba anyway
 dependencies = [
     "streamlit>=1.40.0",
     "pandas>=2.2.0",
