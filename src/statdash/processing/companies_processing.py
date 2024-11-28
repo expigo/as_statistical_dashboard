@@ -38,7 +38,7 @@ class CompaniesDataProcessor:
         if self.raw_data is None:
             raise ValueError("No data loaded. Please load data first.")
             
-        # Identify numerical columns (excluding year-like numbers)
+        # Identify numerical columns
         self.numerical_columns = self.raw_data.select_dtypes(
             include=['int64', 'float64']
         ).columns.tolist()

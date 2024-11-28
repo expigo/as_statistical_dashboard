@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from typing import Optional, List, Dict
 from statdash.processing.companies_processing import CompaniesDataProcessor
-from statdash.config.settings import Settings
+from statdash.config.settings import settings
 
 class CompaniesPage:
     """Handler for the companies analysis page."""
@@ -15,7 +15,7 @@ class CompaniesPage:
         """Load and process the companies data."""
         try:
             self.processor = CompaniesDataProcessor()
-            self.processor.load_data(Settings.COMPANIES_FILE)
+            self.processor.load_data(settings.COMPANIES_FILE)
             self.processor.identify_column_types()
             self.processor.clean_numerical_columns()
             self.data = self.processor.processed_data
